@@ -38,7 +38,6 @@
 }
 
 .article-source {
-  margin: 0 0 2rem 0;
   font-weight: var(--body-small-font-weight);
   line-height: var(--body-small-line-height);
   font-size: var(--body-small-font-size-desktop);

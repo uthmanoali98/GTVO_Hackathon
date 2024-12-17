@@ -3,6 +3,7 @@
 @import url('./variables.css');
 
 html, body, #root {
+  font-size: 10px;
   padding:0;
   margin:0;
   height:100%;
@@ -18,3 +19,172 @@ html, body, #root {
 button {
   cursor: pointer;
 }
+
+/* Line Divider */
+.line-div{
+  height: 3px;
+  width: auto;
+  background-color: var(--color-white-2);
+  margin: 0rem 3rem;
+}
+
+@media (max-width: 760px){
+  .line-div{
+    height: 3px;
+    width: auto;
+    background-color: var(--color-white-2);
+    margin: 0rem 2rem;
+  }
+}
+
+
+/* Global Border Styles*/
+.border-all-default{
+  border: 5px solid var(--color-black-1);
+}
+.border-all-small{
+  border: 3px solid var(--color-black-1);
+
+}
+
+@media (max-width: 760px){
+  .border-all-default{
+    border: 3px solid var(--color-black-1);
+  }
+  .border-all-small{
+    border: 2px solid var(--color-black-1);
+  }
+}
+
+
+/* Global Padding Classes */
+.padding-horizontal {
+  padding-left: var(--padding-large);
+  padding-right: var(--padding-large);
+}
+
+.padding-vertical {
+  padding-top: var(--padding-large);
+  padding-bottom: var(--padding-large);
+}
+
+.padding-lrt {
+  padding-top: var(--padding-large);
+  padding-left: var(--padding-large);
+  padding-right: var(--padding-large);
+}
+
+.padding-all {
+  padding: var(--padding-large);
+}
+
+.padding-all-medium {
+  padding: var(--padding-default);
+}
+
+/* Responsive Padding Adjustments */
+@media (max-width: 760px) {
+  .padding-horizontal {
+    padding-left: var(--padding-default);
+    padding-right: var(--padding-default);
+  }
+
+  .padding-vertical {
+    padding-top: var(--padding-default);
+    padding-bottom: var(--padding-default);
+  }
+
+  .padding-lrt {
+    padding-top: var(--padding-default);
+    padding-left: var(--padding-default);
+    padding-right: var(--padding-default);
+  }
+  .padding-all {
+    padding: var(--padding-default);
+  }
+
+  .padding-all-medium {
+    padding: var(--padding-medium);
+  }
+}
+
+/* Heading Styles */
+h1, .h1 {
+  font-size: var(--h1-font-size-desktop);
+  margin: .5em 0em;
+}
+
+h2, .h2 {
+  font-size: var(--h2-font-size-desktop);
+  margin: .5em 0em;
+
+}
+
+h3, .h3 {
+  font-size: var(--h3-font-size-desktop);
+  margin: .5em 0em;
+}
+
+h4, .h4 {
+  font-size: var(--h4-font-size-desktop);
+  margin: .35em 0em;
+}
+
+.body-large {
+  font-size: var(--body-large-font-size-desktop);
+  margin: .3em 0em;
+  line-height: var(--body-large-line-height);
+}
+
+p, .body-reg {
+  font-size: var(--body-reg-font-size-desktop);
+  margin: .25em 0em;
+  line-height: var(--body-reg-line-height);
+}
+
+.body-small {
+  font-size: var(--body-small-font-size-desktop);
+  margin: .2em 0em;
+  line-height: var(--body-small-line-height);
+
+}
+
+.subtitle {
+  font-size: var(--subtitle-font-size-desktop);
+  margin: .2em 0em;
+}
+
+/* Responsive Adjustments */
+/* @media (max-width: 520px) {
+  h1, .h1 {
+    font-size: var(--h1-font-size-mobile);
+  }
+  
+  h2, .h2 {
+    font-size: var(--h2-font-size-mobile);
+  }
+  
+  h3, .h3 {
+    font-size: var(--h3-font-size-mobile);
+  }
+  
+  h4, .h4 {
+    font-size: var(--h4-font-size-mobile);
+  }
+  
+  .body-large {
+    font-size: var(--body-large-font-size-mobile);
+  }
+  
+  p, .body-reg {
+    font-size: var(--body-reg-font-size-mobile);
+  }
+  
+  .body-small {
+    font-size: var(--body-small-font-size-mobile);
+  }
+  
+  .subtitle {
+    font-size: var(--subtitle-font-size-mobile);
+  }
+} */

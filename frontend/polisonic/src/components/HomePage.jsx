@@ -120,24 +120,32 @@ const HomePage = () => {
 
   return (
     <div className="homepage-container">
-      <div className="hero">
+      <div className="hero padding-all">
         <h1 className="hero-title">PoliSonic</h1>
         <p className="hero-subtitle">Transform news articles into short audio summaries to listen and learn.</p>
       </div>
-      <div className="sticky-search-container">
+      <div className="sticky-search-container padding-lrt">
         <input
-          className="search-input"
+          className="search-input border-all-default"
           placeholder="Paste article URL here"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)} />
         <button className="search-button" onClick={fetchArticleData} disabled={loading}>
-          {loading ? '...' : '➤'}
+          {loading ? <div>
+
+          </div> :
+            <div>
+            </div>
+          }
         </button>
       </div>
+      <div className='line-div top-margin'></div>
       <section className="content-section">
-        <h2 className="section-title">Not sure what to listen to?</h2>
-        <p className="section-subtitle">Browse our featured articles below and stay informed on topics that matter.</p>
-        <div className="categories-wrapper">
+        <div className='padding-all'>
+          <h2 className="section-title">Not sure what to listen to?</h2>
+          <p className="section-subtitle">Browse our featured articles below and stay informed on topics that matter.</p>
+        </div>
+        <div className="categories-wrapper padding-horizontal">
           {ALL_CATEGORIES.map(cat => (
             <button
               key={cat}
@@ -148,7 +156,7 @@ const HomePage = () => {
             </button>
           ))}
         </div>
-        <div className="articles-grid">
+        <div className="articles-grid padding-all">
           {filteredArticles.map((article, idx) => (
             <ArticleCard key={idx} article={article} />
           ))}

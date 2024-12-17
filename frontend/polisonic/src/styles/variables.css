@@ -18,10 +18,18 @@
     --color-purple_main: #FF3FFF;
   
     /* Breakpoints */
-    --breakpoint-mobile: 480px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
-  
+    --breakpoint-mobile: 520px;
+    --breakpoint-tablet: 760px;
+    --breakpoint-desktop: 1020px;
+
+    /* Padding Sizes */
+    --padding-large: 3rem;
+    --padding-default: 2rem;
+    --padding-medium: 1.5rem;
+    --padding-small: 1rem;
+    --padding-tiny: 0.5rem;
+
+
     /* Font Family */
     --font-family-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
   
@@ -33,53 +41,53 @@
     /* H1 */
     --h1-font-weight: 700;
     --h1-line-height: 120%;
-    --h1-font-size-desktop: 2.625rem; /* 42px */
-    --h1-font-size-tablet: 2.25rem;   /* 36px */
-    --h1-font-size-mobile: 1.875rem;  /* 30px */
+    --h1-font-size-desktop: 4.2rem; /* 42px */
+    --h1-font-size-tablet: 3.6rem;   /* 36px */
+    --h1-font-size-mobile: 3rem;  /* 30px */
   
     /* H2 */
     --h2-font-weight: 700;
     --h2-line-height: 125%;
-    --h2-font-size-desktop: 2rem;   /* 32px */
-    --h2-font-size-tablet: 1.75rem; /* 28px */
-    --h2-font-size-mobile: 1.5rem;  /* 24px */
+    --h2-font-size-desktop: 3.2rem;   /* 32px */
+    --h2-font-size-tablet: 2.8rem; /* 28px */
+    --h2-font-size-mobile: 2.4rem;  /* 24px */
   
     /* H3 */
     --h3-font-weight: 700;
     --h3-line-height: 125%;
-    --h3-font-size-desktop: 1.75rem;  /* 28px */
-    --h3-font-size-tablet: 1.5rem;    /* 24px */
-    --h3-font-size-mobile: 1.25rem;   /* 20px */
+    --h3-font-size-desktop: 2.8rem;  /* 28px */
+    --h3-font-size-tablet: 2.4rem;    /* 24px */
+    --h3-font-size-mobile: 2.0rem;   /* 20px */
   
     /* H4 */
     --h4-font-weight: 700;
     --h4-line-height: normal;
-    --h4-font-size-desktop: 1.5rem;   /* 24px */
-    --h4-font-size-tablet: 1.25rem;   /* 20px */
-    --h4-font-size-mobile: 1.125rem;  /* 18px */
+    --h4-font-size-desktop: 2.4rem;   /* 24px */
+    --h4-font-size-tablet: 2.0rem;   /* 20px */
+    --h4-font-size-mobile: 1.8rem;  /* 18px */
   
     /* Body Reg */
     --body-reg-font-weight: 400;
     --body-reg-line-height: 125%;
-    --body-reg-font-size-desktop: 1.125rem;   /* 18px */
-    --body-reg-font-size-tablet-mobile: 1rem; /* 16px */
+    --body-reg-font-size-desktop: 1.8rem;   /* 18px */
+    --body-reg-font-size-tablet-mobile: 1.6rem; /* 16px */
   
     /* Body Small */
     --body-small-font-weight: 400;
     --body-small-line-height: normal;
-    --body-small-font-size-desktop: 1rem;      /* 16px */
-    --body-small-font-size-tablet-mobile: 0.875rem; /* 14px */
+    --body-small-font-size-desktop: 1.6rem;      /* 16px */
+    --body-small-font-size-tablet-mobile: 1.4rem; /* 14px */
   
     /* Body Large */
     --body-large-font-weight: 400;
     --body-large-line-height: 140%;
-    --body-large-font-size-desktop: 1.25rem;   /* 20px */
-    --body-large-font-size-tablet-mobile: 1.125rem; /* 18px */
+    --body-large-font-size-desktop: 2.0rem;   /* 20px */
+    --body-large-font-size-tablet-mobile: 1.8rem; /* 18px */
   
     /* Subtitle */
     --subtitle-font-weight: 500;
     --subtitle-line-height: 135%;
-    --subtitle-font-size-desktop: 1.25rem;    /* 20px */
-    --subtitle-font-size-tablet-mobile: 1.125rem; /* 18px */
-    --subtitle-alt-font-size: 0.75rem; /* 12px */
+    --subtitle-font-size-desktop: 2.0rem;    /* 20px */
+    --subtitle-font-size-tablet-mobile: 1.8rem; /* 18px */
+    --subtitle-alt-font-size: 1.2rem; /* 12px */
   }
