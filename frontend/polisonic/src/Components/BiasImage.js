@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Import placeholder images
-import extremelyLiberal from '../assets/images/extremely-liberal.png';
-import liberal from '../assets/images/liberal.png';
-import neutral from '../assets/images/neutral.png';
-import conservative from '../assets/images/conservative.png';
-import extremelyConservative from '../assets/images/extremely-conservative.png';
+import extremelyLiberal from '../assets/extremely-liberal.png';
+import liberal from '../assets/liberal.png';
+import neutral from '../assets/neutral.png';
+import conservative from '../assets/conservative.png';
+import extremelyConservative from '../assets/extremely-conservative.png';
 
 // Map bias strings to corresponding images
 const biasImageMap = {

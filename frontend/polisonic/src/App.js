@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import React from 'react';
-import HomePage from './Components/HomePage'
+import HomePage from './components/HomePage'
 import './styles/global.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ArticlePage from './Components/ArticlePage';
+import ArticlePage from './components/ArticlePage';
 
 
 function App() {
