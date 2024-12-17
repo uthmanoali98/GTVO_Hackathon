@@ -35,7 +35,7 @@
 /* Progress Container */
 .progress-container {
     flex: 1 0 0;
-    height: 41px;
+    height: 40px;
     background-color: #333;
     /* Dark grey background */
     margin: 0px;

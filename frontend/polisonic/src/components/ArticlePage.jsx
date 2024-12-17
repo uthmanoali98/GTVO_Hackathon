@@ -2,6 +2,9 @@
 import React from 'react';
 import QAComponent from './QAComponent';
 import './ArticlePage.css';
+import { useLocation } from 'react-router-dom';
+import AudioPlayer from './AudioPlayer/AudioPlayer';
+import BiasImage from './BiasImage';
 
 const sampleArticleData = {
   title: "Artificial Intelligence and the Future of Work",
@@ -31,28 +34,37 @@ Mauris venenatis platea tellus varius gravida tempus ornare. Etiam ultricies hen
 };
 
 const ArticlePage = () => {
-  const { title, source, imageUrl, transcript, faqs } = sampleArticleData;
+  const { source, imageUrl, transcript, faqs } = sampleArticleData;
+  const location = useLocation();
+  const { articleData } = location.state || {};
+  const { title, summary, critical_questions, audio_file, bias, image } = articleData;
+
+
+  if (!articleData) {
+    return <p>Error: No article data found. Please go back and try again.</p>;
+  }
 
   return (
     <div className="article-page-container">
       <div className="article-hero">
-        <img src={imageUrl} alt={title} className="article-hero-image" />
+        <img src={image} alt={title} className="article-hero-image" />
         <h1 className="article-title">{title}</h1>
         <p className="article-source">Source: {source}</p>
       </div>
       <div className="article-content">
         <h2 className="section-heading">Audio Transcript</h2>
-        <p className="article-transcript">{transcript}</p>
+        <p className="article-transcript">{summary}</p>
 
         <h2 className="section-heading">Critical Questions</h2>
-        {faqs.map((faq, idx) => (
-          <QAComponent 
+        {critical_questions.map((faq, idx) => (
+          <QAComponent
             key={idx}
             question={faq.question}
             answer={faq.answer}
           />
         ))}
       </div>
+      <AudioPlayer audioSrc={audio_file} />
     </div>
   );
 };
