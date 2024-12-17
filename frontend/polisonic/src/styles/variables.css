@@ -1,0 +1,85 @@
+/* src/variables.css */
+
+/* Colors */
+:root {
+    --color-black-1: #141414;
+    --color-black-2: #2C2C2C;
+    --color-black-3: #434343;
+    --color-white-1: #ffffff;
+    --color-white-2: #E7E7E7;
+    --color-white-3: #D0D0D0;
+    --color-red_light: '#FFE2E2';
+    --color-red_main: '#FF3C3C';
+    --color-blue_light: '#E1E1FF';
+    --color-blue_main: '#3A36FF';
+    --color-green_light: '#DAFEEA';
+    --color-green_main: '#05F975';
+    --color-purple_light: '#FFE2FF';
+    --color-purple_main: '#FF3FFF';
+  
+    /* Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+  
+    /* Font Family */
+    --font-family-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+    /* Typography 
+      We'll define variables for desktop sizes by default, 
+      then override in media queries within component CSS.
+    */
+  
+    /* H1 */
+    --h1-font-weight: 700;
+    --h1-line-height: 120%;
+    --h1-font-size-desktop: 2.625rem; /* 42px */
+    --h1-font-size-tablet: 2.25rem;   /* 36px */
+    --h1-font-size-mobile: 1.875rem;  /* 30px */
+  
+    /* H2 */
+    --h2-font-weight: 700;
+    --h2-line-height: 125%;
+    --h2-font-size-desktop: 2rem;   /* 32px */
+    --h2-font-size-tablet: 1.75rem; /* 28px */
+    --h2-font-size-mobile: 1.5rem;  /* 24px */
+  
+    /* H3 */
+    --h3-font-weight: 700;
+    --h3-line-height: 125%;
+    --h3-font-size-desktop: 1.75rem;  /* 28px */
+    --h3-font-size-tablet: 1.5rem;    /* 24px */
+    --h3-font-size-mobile: 1.25rem;   /* 20px */
+  
+    /* H4 */
+    --h4-font-weight: 700;
+    --h4-line-height: normal;
+    --h4-font-size-desktop: 1.5rem;   /* 24px */
+    --h4-font-size-tablet: 1.25rem;   /* 20px */
+    --h4-font-size-mobile: 1.125rem;  /* 18px */
+  
+    /* Body Reg */
+    --body-reg-font-weight: 400;
+    --body-reg-line-height: 125%;
+    --body-reg-font-size-desktop: 1.125rem;   /* 18px */
+    --body-reg-font-size-tablet-mobile: 1rem; /* 16px */
+  
+    /* Body Small */
+    --body-small-font-weight: 400;
+    --body-small-line-height: normal;
+    --body-small-font-size-desktop: 1rem;      /* 16px */
+    --body-small-font-size-tablet-mobile: 0.875rem; /* 14px */
+  
+    /* Body Large */
+    --body-large-font-weight: 400;
+    --body-large-line-height: 140%;
+    --body-large-font-size-desktop: 1.25rem;   /* 20px */
+    --body-large-font-size-tablet-mobile: 1.125rem; /* 18px */
+  
+    /* Subtitle */
+    --subtitle-font-weight: 500;
+    --subtitle-line-height: 135%;
+    --subtitle-font-size-desktop: 1.25rem;    /* 20px */
+    --subtitle-font-size-tablet-mobile: 1.125rem; /* 18px */
+    --subtitle-alt-font-size: 0.75rem; /* 12px */
+  }

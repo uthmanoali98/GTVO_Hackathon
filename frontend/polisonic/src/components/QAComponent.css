@@ -1,0 +1,53 @@
+/* src/components/QAComponent.css */
+
+.qa-item {
+    border-top: 1px solid var(--color-black-1);
+    padding: 1rem 0;
+  }
+  
+  .qa-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--h4-font-weight);
+    line-height: var(--h4-line-height);
+    font-size: var(--h4-font-size-desktop);
+  }
+  
+  @media (max-width: var(--breakpoint-desktop)) {
+    .qa-question {
+      font-size: var(--h4-font-size-tablet);
+    }
+  }
+  
+  @media (max-width: var(--breakpoint-tablet)) {
+    .qa-question {
+      font-size: var(--h4-font-size-mobile);
+    }
+  }
+  
+  .qa-toggle-button {
+    background: var(--color-black-3);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .qa-answer {
+    margin-top: 0.5rem;
+    font-weight: var(--body-reg-font-weight);
+    line-height: var(--body-reg-line-height);
+    font-size: var(--body-reg-font-size-desktop);
+  }
+  
+  @media (max-width: var(--breakpoint-desktop)) {
+    .qa-answer {
+      font-size: var(--body-reg-font-size-tablet-mobile);
+    }
+  }

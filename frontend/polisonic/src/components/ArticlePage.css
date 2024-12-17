@@ -1,0 +1,90 @@
+/* src/components/ArticlePage.css */
+
+.article-page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+  }
+  
+  .article-hero {
+    text-align: left;
+    margin-bottom: 1.4rem;
+  }
+  
+  .article-hero-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .article-title {
+    margin: 0 0 0.5rem 0;
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    font-size: var(--h2-font-size-desktop);
+  }
+  
+  @media (max-width: var(--breakpoint-desktop)) {
+    .article-title {
+      font-size: var(--h2-font-size-tablet);
+    }
+  }
+  
+  @media (max-width: var(--breakpoint-tablet)) {
+    .article-title {
+      font-size: var(--h2-font-size-mobile);
+    }
+  }
+  
+  .article-source {
+    margin: 0 0 2rem 0;
+    font-weight: var(--body-small-font-weight);
+    line-height: var(--body-small-line-height);
+    font-size: var(--body-small-font-size-desktop);
+    font-style: italic;
+    color: var(--color-black-3);
+  }
+  
+  @media (max-width: var(--breakpoint-desktop)) {
+    .article-source {
+      font-size: var(--body-small-font-size-tablet-mobile);
+    }
+  }
+  
+  .article-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section-heading {
+    margin: 2rem 0 1rem 0;
+    font-weight: var(--h3-font-weight);
+    line-height: var(--h3-line-height);
+    font-size: var(--h3-font-size-desktop);
+  }
+  
+  @media (max-width: var(--breakpoint-desktop)) {
+    .section-heading {
+      font-size: var(--h3-font-size-tablet);
+    }
+  }
+  
+  @media (max-width: var(--breakpoint-tablet)) {
+    .section-heading {
+      font-size: var(--h3-font-size-mobile);
+    }
+  }
+  
+  .article-transcript {
+    font-weight: var(--body-reg-font-weight);
+    line-height: var(--body-reg-line-height);
+    font-size: var(--body-reg-font-size-desktop);
+    margin: 0;
+    white-space: pre-line; /* ensures line breaks if any */
+  }
+  
+  @media (max-width: var(--breakpoint-desktop)) {
+    .article-transcript {
+      font-size: var(--body-reg-font-size-tablet-mobile);
+    }
+  }
