@@ -1,0 +1,72 @@
+/* Audio Player Container */
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    /* Black background */
+    padding: 15px;
+    /* Padding on sides */
+    width: 345px;
+    height: 70px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
+}
+
+/* Play/Pause and Right Square Buttons */
+.square-button {
+    background-color: #fff;
+    color: #000;
+    width: 40px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Progress Container */
+.progress-container {
+    flex: 1 0 0;
+    height: 41px;
+    background-color: #333;
+    /* Dark grey background */
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    /* Rectangular shape */
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 100%;
+    background-color: #00ff8c;
+    /* Green progress bar */
+}
+
+/* Time Display Inside Progress Bar */
+.time-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    /* Prevent interaction */
+}
+
+/* Right Square Placeholder */
+.right-square {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+}
