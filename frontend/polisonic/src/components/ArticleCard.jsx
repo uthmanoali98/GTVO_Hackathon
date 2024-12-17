@@ -7,8 +7,10 @@ const ArticleCard = ({ article }) => {
   return (
     <div className="article-card">
       <div className="image-container">
+        <div className='image-filter'></div>
         <img src={imageUrl} alt={title} />
       </div>
+      <div className='black-divider'></div>
       <div className="content">
         <h3 className="article-title">{title}</h3>
         <p className="article-description">{description}</p>

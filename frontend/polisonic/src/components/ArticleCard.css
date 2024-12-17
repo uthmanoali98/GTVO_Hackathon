@@ -1,24 +1,46 @@
 /* src/components/ArticleCard.css */
 
 .article-card {
-    border: 1px solid var(--color-black-1);
+    border: 3px solid var(--color-black-1);
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
   
-  .image-container img {
+  .image-container {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  img {
+    width: auto;
+    height: 100%;
+  }
+
+
+  .image-filter{
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-green_main);
+    z-index: 10;
+    mix-blend-mode: saturation;
+    position: absolute;
   }
   
   .content {
     padding: 1rem;
   }
   
+  .black-divider{
+    height: 3px;
+    background-color: var(--color-black-1);
+    width: 100%;
+  }
+
   .article-title {
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 2em;
     font-weight: var(--h3-font-weight);
     line-height: var(--h3-line-height);
     font-size: var(--h3-font-size-desktop);
@@ -37,10 +59,16 @@
   }
   
   .article-description {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 1rem 0;
     font-weight: var(--body-reg-font-weight);
     line-height: var(--body-reg-line-height);
     font-size: var(--body-reg-font-size-desktop);
+    color: var(--color-black-2);
+    display: -webkit-box;          /* Use flexbox for WebKit-based browsers */
+    -webkit-box-orient: vertical;  /* Set box orientation to vertical */
+    -webkit-line-clamp: 4;         /* Number of lines to show */
+    overflow: hidden;              /* Hide any overflowing text */
+    text-overflow: ellipsis;  
   }
   
   @media (max-width: var(--breakpoint-desktop)) {
@@ -50,7 +78,7 @@
   }
   
   .article-source {
-    margin: 0;
+    margin: 0 0 0 0;
     font-weight: var(--body-small-font-weight);
     line-height: var(--body-small-line-height);
     font-size: var(--body-small-font-size-desktop);

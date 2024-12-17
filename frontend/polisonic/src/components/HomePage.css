@@ -114,20 +114,41 @@
   .categories-wrapper {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0rem;
+    position: relative;
+
+    /* Make the container stop at screen/device width */
+    width: 100%;
+
+    /* Allow horizontal scrolling if content exceeds width */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+    white-space: nowrap;
+  }
+
+  .categories-wrapper::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit-based browsers if desired */
   }
   
+  /* .category-fade-div{
+    width: 10px;
+    height: 100%;
+    margin-right: 0px;
+    background-color: brown;
+  }
+   */
   .category-button {
-    border: 1px solid var(--color-black-1);
+    border: 3px solid var(--color-white-2);
     background: white;
     padding: 0.5rem 1rem;
-    font-weight: var(--body-reg-font-weight);
+    font-weight: var(--h4-font-weight);
     line-height: var(--body-reg-line-height);
     font-size: var(--body-reg-font-size-tablet-mobile);
   }
   
   .category-button.active {
     background: var(--color-black-1);
+    border: 3px solid var(--color-black-1);
     color: white;
   }
   

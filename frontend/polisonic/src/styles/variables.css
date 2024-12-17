@@ -8,14 +8,14 @@
     --color-white-1: #ffffff;
     --color-white-2: #E7E7E7;
     --color-white-3: #D0D0D0;
-    --color-red_light: '#FFE2E2';
-    --color-red_main: '#FF3C3C';
-    --color-blue_light: '#E1E1FF';
-    --color-blue_main: '#3A36FF';
-    --color-green_light: '#DAFEEA';
-    --color-green_main: '#05F975';
-    --color-purple_light: '#FFE2FF';
-    --color-purple_main: '#FF3FFF';
+    --color-red_light: #FFE2E2;
+    --color-red_main: #FF3C3C;
+    --color-blue_light: #E1E1FF;
+    --color-blue_main: #3A36FF;
+    --color-green_light: #DAFEEA;
+    --color-green_main: #05F975;
+    --color-purple_light: #FFE2FF;
+    --color-purple_main: #FF3FFF;
   
     /* Breakpoints */
     --breakpoint-mobile: 480px;
