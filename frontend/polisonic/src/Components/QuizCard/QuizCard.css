@@ -1,0 +1,23 @@
+.quiz-card-container {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+/* Take Quiz Card */
+.take-quiz-card {
+    text-align: left;
+    background-color: var(--color-white-1);
+}
+
+.start-quiz-btn {
+    background-color: var(--color-green_main);
+    color: var(--color-black-1);
+    padding: var(--padding-small);
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 1rem;
+    width: 150px;
+    height: 45px;
+    display: inline-block;
+}

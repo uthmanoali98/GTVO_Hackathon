@@ -1,0 +1,71 @@
+@import url('../../styles/variables.css');
+
+/* QuizQuestion.css */
+.quiz-question-container {
+    background-color: var(--color-black-1);
+    /* Black background */
+    color: var(--color-white-1);
+    /* White text */
+    border: 5px solid var(--color-black-1);
+    /* Solid border */
+    height: 350px;
+    /* Set desired fixed height */
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.question-title {
+    font-size: var(--h3-font-size-desktop);
+    margin-bottom: var(--padding-small);
+}
+
+.question-text {
+    font-size: var(--body-reg-font-size-desktop);
+    margin-bottom: var(--padding-medium);
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: left;
+    gap: 1.5rem;
+}
+
+.quiz-button {
+    font-size: var(--body-large-font-size-desktop);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: 3px solid;
+    background-color: var(--color-black-1);
+    transition: all 0.3s ease;
+}
+
+/* Ensure the default buttons still have their outline colors */
+.true-button {
+    border-color: var(--color-green_main);
+    color: var(--color-green_main);
+}
+
+.false-button {
+    border-color: var(--color-red_main);
+    color: var(--color-red_main);
+}
+
+/* True button selected (Green highlight with green border) */
+.true-button.true-selected {
+    background-color: var(--color-green_main);
+    border: 3px solid var(--color-green-main);
+    /* Green border */
+    color: var(--color-black-1);
+    font-weight: 700;
+    /* Text color black for contrast */
+}
+
+/* False button selected (Red highlight with red border) */
+.false-button.false-selected {
+    background-color: var(--color-red_main);
+    border: 3px solid var(--color-red_main);
+    /* Red border */
+    color: var(--color-black-1);
+    font-weight: 700;
+    /* Text color black for contrast */
+}

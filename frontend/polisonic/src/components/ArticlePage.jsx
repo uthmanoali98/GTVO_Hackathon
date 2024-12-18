@@ -6,6 +6,13 @@ import { useLocation } from 'react-router-dom';
 import AudioPlayer from './AudioPlayer/AudioPlayer';
 import BiasImage from './BiasImage';
 import AudioTranscript from './AudioTranscript';
+import QuizCard from './QuizCard/QuizCard';
+
+const dummyQuestions = [
+  { question: "The sun rises in the west. Lorem ipsum dolor sit amet consectetur. Id ut mus bibendum dolor nullam laoreet pretium aliquet. Dolor porta ut iaculis amet diam massa facilisis. Habitant diam orci bibendum amet magna ut enim ac. Tortor nulla viverra ", answer: "False" },
+  { question: "Water freezes at 0 degrees Celsius.", answer: "True" },
+  { question: "The capital of France is Berlin.", answer: "False" },
+];
 
 const sampleArticleData = {
   title: "Artificial Intelligence and the Future of Work",
@@ -42,7 +49,14 @@ const ArticlePage = () => {
 
 
   if (!articleData) {
-    return <p>Error: No article data found. Please go back and try again.</p>;
+    const {
+      title,
+      summary,
+      critical_questions,
+      audio_file,
+      bias,
+      image
+    } = articleData || sampleArticleData;
   }
 
   return (
@@ -55,6 +69,7 @@ const ArticlePage = () => {
       <div className="article-content">
         <AudioTranscript transcript={summary} />
         <BiasImage bias={bias} />
+        <QuizCard quizQuestions={dummyQuestions} />
         <h2 className="section-heading">Critical Questions</h2>
         {critical_questions.map((faq, idx) => (
           <QAComponent
