@@ -1,36 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Import placeholder images
-import extremelyLiberal from '../assets/extremely-liberal.png';
-import liberal from '../assets/liberal.png';
-import neutral from '../assets/neutral.png';
-import conservative from '../assets/conservative.png';
-import extremelyConservative from '../assets/extremely-conservative.png';
-
-// Map bias strings to corresponding images
-const biasImageMap = {
-    "Extremely Liberal": extremelyLiberal,
-    "Liberal": liberal,
-    "Neutral": neutral,
-    "Conservative": conservative,
-    "Extremely Conservative": extremelyConservative,
-};
+import './BiasImage.css'; // Component-specific styles
 
 const BiasImage = ({ bias }) => {
-    const imageSrc = biasImageMap[bias] || neutral; // Default to "neutral" if bias is not recognized
+
+    bias = bias.substring(3);
+    // Helper function to apply bias-specific classes
+    const biasClass = () => {
+        switch (bias) {
+            case 'Very Liberal':
+                return 'bias-very-liberal';
+            case 'Very Conservative':
+                return 'bias-very-conservative';
+            case 'Neutral':
+                return 'bias-neutral';
+            case 'Conservative':
+                return 'bias-conservative';
+            case 'Liberal':
+                return 'bias-liberal';
+            default:
+                return 'bias-neutral';
+        }
+    };
 
     return (
-        <div className="bias-image-container">
-            <img
-                src={imageSrc}
-                alt={bias}
-                className="bias-image"
-                style={{ width: '100px', height: '100px' }} // Adjust size as needed
-            />
-            <p className="bias-label" style={{ textAlign: 'center', marginTop: '8px' }}>
-                {bias}
-            </p>
+        <div className={`bias-container padding-all-medium ${biasClass()}`}>
+            <div className="bias-header">
+                <span className="body-reg">Article Bias</span>
+                <span className="h4 bias-label">{bias}</span>
+            </div>
+            <div className="bias-line">
+                <div className="bias-indicator"></div>
+            </div>
+            <div className="bias-info">
+                <span className="info-icon">i</span>
+            </div>
         </div>
     );
 };

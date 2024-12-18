@@ -5,6 +5,7 @@ import './ArticlePage.css';
 import { useLocation } from 'react-router-dom';
 import AudioPlayer from './AudioPlayer/AudioPlayer';
 import BiasImage from './BiasImage';
+import AudioTranscript from './AudioTranscript';
 
 const sampleArticleData = {
   title: "Artificial Intelligence and the Future of Work",
@@ -52,9 +53,8 @@ const ArticlePage = () => {
         <p className="article-source">Source: {source}</p>
       </div>
       <div className="article-content">
-        <h2 className="section-heading">Audio Transcript</h2>
-        <p className="article-transcript">{summary}</p>
-
+        <AudioTranscript transcript={summary} />
+        <BiasImage bias={bias} />
         <h2 className="section-heading">Critical Questions</h2>
         {critical_questions.map((faq, idx) => (
           <QAComponent

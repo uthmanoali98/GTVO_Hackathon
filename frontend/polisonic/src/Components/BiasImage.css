@@ -1,0 +1,70 @@
+@import url('../styles/variables.css');
+
+/* Container Styling */
+.bias-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white-2);
+    position: relative;
+}
+
+/* Header and Bias Text */
+.bias-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.bias-label {
+    font-weight: 700;
+    font-size: var(--h4-font-size-mobile);
+}
+
+/* Bias-Specific Styles */
+.bias-neutral {
+    background-color: var(--color-white-2);
+}
+
+.bias-very-liberal {
+    background-color: var(--color-blue_light);
+
+}
+
+.bias-very-conservative {
+    background-color: var(--color-red_light);
+}
+
+.bias-conservative {
+    background-color: var(--color-red_light);
+}
+
+.bias-liberal {
+    background-color: var(--color-blue_light);
+}
+
+/* Bias Line */
+.bias-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-blue_main), var(--color-red_main));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Info Icon */
+.bias-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-white-1);
+}
+
+.info-icon {
+    font-weight: 700;
+    font-size: var(--subtitle-alt-font-size);
+    color: var(--color-black-2);
+}
