@@ -3,19 +3,17 @@
 .article-page-container {
   display: flex;
   flex-direction: column;
-  padding: 1.4rem;
-  padding-bottom: 90px;
 }
 
 .article-hero {
   text-align: left;
   margin-bottom: 1.4rem;
+  border-bottom: 3px solid var(--color-black-)
 }
 
 .article-hero-image {
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
 }
 
 .article-title {

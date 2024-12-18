@@ -1,0 +1,33 @@
+.score-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .score-button {
+    background-color: var(--color-green-light);
+    border: none;
+    color: var(--color-black-1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .score-button.decrement {
+    background-color: var(--color-red-light);
+  }
+  
+  .score-button.active {
+    background-color: var(--color-green-main);
+  }
+  
+  .score-button.decrement.active {
+    background-color: var(--color-red-main);
+  }
+  
+  .score-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }

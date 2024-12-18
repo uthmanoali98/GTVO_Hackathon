@@ -134,7 +134,7 @@ const HomePage = () => {
             animationData={PoliSonic}
             play
             loop
-            style={{ width: 60, height: 60}}
+            style={{ width: 75, height: 75}}
           />
           </div>
         </div>

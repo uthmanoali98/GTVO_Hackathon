@@ -13,39 +13,58 @@ const dummyQuestions = [
   { question: "Water freezes at 0 degrees Celsius.", answer: "True" },
   { question: "The capital of France is Berlin.", answer: "False" },
 ];
+import CommunityNote from './CommunityNotes/CommunityNote';
+
 
 const sampleArticleData = {
   title: "Artificial Intelligence and the Future of Work",
   source: "BBC News",
-  imageUrl: "https://placehold.co/400x200?text=Article+Hero",
-  transcript: `Lorem ipsum dolor sit amet consectetur. Id ut nus bibendum dolor nullam laoreet pretium aliquet. Dolor porta ut iaculis amet diam massa facilisis. Habitant diam orci bibendum amet magna ut enim ac. Tortor nulla viverra orci sagittis massa etiam. Dolor vitae pretium fames a nam feugiat. Integer eget accumsan elementum condimentum diam adipiscing.
-
-Mauris venenatis platea tellus varius gravida tempus ornare. Etiam ultricies hendrerit dui accumsan mauris. Placerat facilisis sed eget massa mollis in ultrices. Viverra facilisis quam mattis a integer quam. Viverra curabitur condimentum integer id ultricies purus quis in egestas. Id eu ipsum ullamcorper magna at elementum sollicitudin tristique. Vel nulla enim lacus in et feugiat massa. In lectus adipiscing laoreet neque viverra sed tincidunt.`,
-  faqs: [
+  image: "https://placehold.co/400x200?text=Article+Image",
+  summary: `Hey there, I'm PoliSonic, here to help you navigate the political scene in a way that's easy to understand. 
+  President-elect Trump surprised many by inviting Chinese President Xi Jinping to his upcoming inauguration. 
+  This gesture came amid rising fears of a trade war between the two countries.
+  
+  However, sources have indicated that Xi might not accept the invitation. 
+  The invitation came at a time when the U.S. intelligence community revealed a significant cyber attack on U.S. telecom companies by Chinese hackers.
+  
+  This attack compromised the data of millions of Americans, including Vice President-elect JD Vance.`,
+  critical_questions: [
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
-      answer: `Cras amet sagittis vulputate id. A augue
-      ridiculus odio auctor vestibulum sed enim aliquet odio rutrum.
-      Id cras est nibh montes mattis scelerisque nullam vulputate.
-      Lectus lacus ridiculus id euismod. Volutpat aliquet non in
-      ultricies ut amet risus urna vitae. Diam feugiat venenatis
-      ut sed risus. Arcu felis morbi pharetra quisque nunc neque
-      eros. Ultrices velit gravida at dui tincidunt enim tortor ut.`
+      question: "How might Trump's invitation to Xi Jinping impact U.S.-China relations?",
+      answer: "Trump's invitation could signal an attempt to improve diplomatic ties, but it may also raise concerns among U.S. allies about his stance on trade and security."
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
-      answer: `Another answer here. Nulla velit nisl, convallis
-      at consequat in, ultricies eu lorem. Etiam ac risus a felis
-      ornare bibendum.`
+      question: "What are the implications of the cyber attack on U.S. telecom companies?",
+      answer: "The attack highlights vulnerabilities in critical infrastructure and raises concerns about national security and data privacy for millions of Americans."
+    },
+    {
+      question: "How can young voters critically analyze media narratives about international relations?",
+      answer: "Young voters can compare multiple sources, question biases, and evaluate facts before forming opinions on global issues."
     }
-  ]
+  ],
+  audio_file: "http://localhost:3000/sample.mp3",
+  bias: "4. Very Liberal"
 };
+const dummyNotes = [
+  {
+    url: 'https://www.nytimes.com/',
+    description: 'Lorem ipsum dolor sit amet consectetur. Eu in eleifend tempor sed in convallis nec turpis fermentum.',
+    author: 'First Last',
+    initialScore: 2,
+  },
+  {
+    url: 'https://www.cnn.com/',
+    description: 'Another community note example with meaningful content to test the component rendering.',
+    author: 'Jane Doe',
+    initialScore: 3,
+  },
+];
 
 const ArticlePage = () => {
   const { source, imageUrl, transcript, faqs } = sampleArticleData;
   const location = useLocation();
   const { articleData } = location.state || {};
-  const { title, summary, critical_questions, audio_file, bias, image } = articleData;
+  const { title, summary, critical_questions, audio_file, bias, image } = articleData || sampleArticleData;
 
 
   if (!articleData) {
@@ -63,10 +82,10 @@ const ArticlePage = () => {
     <div className="article-page-container">
       <div className="article-hero">
         <img src={image} alt={title} className="article-hero-image" />
+      </div>
+      <div className="article-content padding-all">
         <h1 className="article-title">{title}</h1>
         <p className="article-source">Source: {source}</p>
-      </div>
-      <div className="article-content">
         <AudioTranscript transcript={summary} />
         <BiasImage bias={bias} />
         <QuizCard quizQuestions={dummyQuestions} />
@@ -77,6 +96,10 @@ const ArticlePage = () => {
             question={faq.question}
             answer={faq.answer}
           />
+        ))}
+        <h2>Community Notes</h2>
+        {dummyNotes.map((note, idx) => (
+          <CommunityNote key={idx} note={note} />
         ))}
       </div>
       <AudioPlayer audioSrc={audio_file} />

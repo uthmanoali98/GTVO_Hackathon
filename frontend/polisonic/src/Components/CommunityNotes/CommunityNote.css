@@ -1,0 +1,26 @@
+.community-note {
+    border: 3px solid var(--color-white-3);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    align-self: stretch;
+    margin-bottom: 2em;
+}
+
+.note-url {
+    color: blue;
+    text-decoration: underline;
+}
+
+.note-description {}
+
+.note-author {}
+
+.note-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}

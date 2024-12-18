@@ -76,6 +76,9 @@ button {
 .padding-all {
   padding: var(--padding-large);
 }
+.padding-all {
+  padding: var(--padding-large);
+}
 
 .padding-all-medium {
   padding: var(--padding-default);

@@ -48,6 +48,7 @@ def determine_political_bias(content):
             {"role": "user", "content": prompt}
         ]
     )
+    print(response)
     return response.choices[0].message.content.strip()
 
 def summarize_article_for_gen_z(content):
