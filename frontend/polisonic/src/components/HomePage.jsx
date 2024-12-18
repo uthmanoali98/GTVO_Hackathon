@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArticleCard from './ArticleCard';
 import './HomePage.css';
+import Lottie from 'react-lottie-player';
+import PoliSonic from '../assets/PoliSonic.json'; // Import Lottie JSON
 import image1 from '../assets/image01.jpg';
 import image2 from '../assets/image02.jpg';
 import image3 from '../assets/image03.jpg';
@@ -12,6 +14,7 @@ import image6 from '../assets/image06.jpg';
 import image7 from '../assets/image07.jpg';
 import image8 from '../assets/image08.jpg';
 import image9 from '../assets/image09.jpg';
+import heroimage from '../assets/hero-image.jpg';
 
 const ALL_CATEGORIES = ['All', 'Politics', 'Economy', 'Healthcare', 'Technology', 'Culture', 'Climate'];
 const ARTICLES = [
@@ -83,6 +86,7 @@ const ARTICLES = [
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false); // Track input focus
   const [loading, setLoading] = useState(false); // To show a loading indicator
   const navigate = useNavigate();
 
@@ -121,25 +125,64 @@ const HomePage = () => {
   return (
     <div className="homepage-container">
       <div className="hero padding-all">
-        <h1 className="hero-title">PoliSonic</h1>
-        <p className="hero-subtitle">Transform news articles into short audio summaries to listen and learn.</p>
+      <div className="logo-container">
+          {/* PoliSonic Logo */}
+          <h1 className="hero-title">PoliSonic</h1>
+          {/* Lottie Animation */}
+          <div className='lottie-container'>
+          <Lottie
+            animationData={PoliSonic}
+            play
+            loop
+            style={{ width: 60, height: 60}}
+          />
+          </div>
+        </div>
+        <h4 className="hero-subtitle">Transform news articles into short audio summaries to listen and learn.</h4>
       </div>
       <div className="sticky-search-container padding-lrt">
         <input
-          className="search-input border-all-default"
+          className={`search-input ${isFocused ? 'active' : ''} ${inputValue ? 'filled' : ''}`}
           placeholder="Paste article URL here"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)} />
-        <button className="search-button" onClick={fetchArticleData} disabled={loading}>
-          {loading ? <div>
-
-          </div> :
-            <div>
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button
+          className={`search-button border-all-default ${inputValue ? 'filled' : ''}`}
+          onClick={fetchArticleData}
+          disabled={!inputValue || loading}
+        >
+          {loading ? (
+            '...'
+          ) : (
+            <div className='svg-container'>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="arrow-icon"
+            >
+              <path d="M10.7542 2L20 12M20 12L10.7542 22M20 12H0"></path>
+            </svg>
             </div>
-          }
+          )}
         </button>
       </div>
-      <div className='line-div top-margin'></div>
+      <div className='padding-all'>
+      <div className="hero-image-container border-all-default">
+        <div className='image-filter'></div>
+        <img className='img-hero' src={heroimage} alt='hero'/>
+      </div>
+      </div>
+      <div className='padding-vertical'>
+      <div className='line-div'></div>
+      </div>
       <section className="content-section">
         <div className='padding-all'>
           <h2 className="section-title">Not sure what to listen to?</h2>

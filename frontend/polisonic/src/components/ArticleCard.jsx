@@ -8,7 +8,7 @@ const ArticleCard = ({ article }) => {
     <div className="article-card border-all-default">
       <div className="image-container">
         <div className='image-filter'></div>
-        <img src={imageUrl} alt={title} />
+        <img className='img-article' src={imageUrl} alt={title} />
       </div>
       <div className='black-divider'></div>
       <div className="padding-all">

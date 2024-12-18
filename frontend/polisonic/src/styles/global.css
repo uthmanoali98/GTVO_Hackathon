@@ -25,7 +25,6 @@ button {
   height: 3px;
   width: auto;
   background-color: var(--color-white-2);
-  margin: 0rem 3rem;
 }
 
 @media (max-width: 760px){
@@ -116,7 +115,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: var(--h2-font-size-desktop);
-  margin: .5em 0em;
+  margin: 0em 0em;
 
 }
 
