@@ -2,18 +2,20 @@
 
 @import url('./variables.css');
 
-html, body, #root {
+html,
+body,
+#root {
   font-size: 10px;
-  padding:0;
-  margin:0;
-  height:100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
   font-family: var(--font-family-primary);
   background: var(--color-white-1);
   color: var(--color-black-1);
 }
 
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 button {
@@ -21,36 +23,37 @@ button {
 }
 
 /* Line Divider */
-.line-div{
+.line-div {
   height: 3px;
   width: auto;
   background-color: var(--color-white-2);
 }
 
-@media (max-width: 760px){
-  .line-div{
+@media (max-width: 760px) {
+  .line-div {
     height: 3px;
     width: auto;
     background-color: var(--color-white-2);
-    margin: 0rem 2rem;
   }
 }
 
 
 /* Global Border Styles*/
-.border-all-default{
+.border-all-default {
   border: 5px solid var(--color-black-1);
 }
-.border-all-small{
+
+.border-all-small {
   border: 3px solid var(--color-black-1);
 
 }
 
-@media (max-width: 760px){
-  .border-all-default{
+@media (max-width: 760px) {
+  .border-all-default {
     border: 3px solid var(--color-black-1);
   }
-  .border-all-small{
+
+  .border-all-small {
     border: 2px solid var(--color-black-1);
   }
 }
@@ -73,9 +76,16 @@ button {
   padding-right: var(--padding-large);
 }
 
+.padding-lrb {
+  padding-bottom: var(--padding-large);
+  padding-left: var(--padding-large);
+  padding-right: var(--padding-large);
+}
+
 .padding-all {
   padding: var(--padding-large);
 }
+
 .padding-all {
   padding: var(--padding-large);
 }
@@ -101,6 +111,7 @@ button {
     padding-left: var(--padding-default);
     padding-right: var(--padding-default);
   }
+
   .padding-all {
     padding: var(--padding-default);
   }
@@ -108,27 +119,38 @@ button {
   .padding-all-medium {
     padding: var(--padding-medium);
   }
+
+  .padding-lrb {
+    padding-bottom: var(--padding-medium);
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
+  }
 }
 
 /* Heading Styles */
-h1, .h1 {
+h1,
+.h1 {
   font-size: var(--h1-font-size-desktop);
   margin: .5em 0em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: var(--h2-font-size-desktop);
   margin: 0em 0em;
 
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: var(--h3-font-size-desktop);
   margin: .5em 0em;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: var(--h4-font-size-desktop);
+  font-weight: var(--h4-font-weight);
   margin: .35em 0em;
 }
 
@@ -138,7 +160,8 @@ h4, .h4 {
   line-height: var(--body-large-line-height);
 }
 
-p, .body-reg {
+p,
+.body-reg {
   font-size: var(--body-reg-font-size-desktop);
   margin: .25em 0em;
   line-height: var(--body-reg-line-height);
@@ -154,6 +177,13 @@ p, .body-reg {
 .subtitle {
   font-size: var(--subtitle-font-size-desktop);
   margin: .2em 0em;
+}
+
+.link {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  color: var(--color-blue_main);
+  cursor: pointer;
 }
 
 /* Responsive Adjustments */

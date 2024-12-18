@@ -7,15 +7,14 @@ import AudioPlayer from './AudioPlayer/AudioPlayer';
 import BiasImage from './BiasImage';
 import AudioTranscript from './AudioTranscript';
 import QuizCard from './QuizCard/QuizCard';
+import CommunityNote from './CommunityNotes/CommunityNote';
+
 
 const dummyQuestions = [
   { question: "The sun rises in the west. Lorem ipsum dolor sit amet consectetur. Id ut mus bibendum dolor nullam laoreet pretium aliquet. Dolor porta ut iaculis amet diam massa facilisis. Habitant diam orci bibendum amet magna ut enim ac. Tortor nulla viverra ", answer: "False" },
   { question: "Water freezes at 0 degrees Celsius.", answer: "True" },
   { question: "The capital of France is Berlin.", answer: "False" },
 ];
-import CommunityNote from './CommunityNotes/CommunityNote';
-
-
 const sampleArticleData = {
   title: "Artificial Intelligence and the Future of Work",
   source: "BBC News",
@@ -84,20 +83,30 @@ const ArticlePage = () => {
         <img src={image} alt={title} className="article-hero-image" />
       </div>
       <div className="article-content padding-all">
-        <h1 className="article-title">{title}</h1>
-        <p className="article-source">Source: {source}</p>
+        <div className='meta-container padding-vertical'>
+          <h1 className="article-title">{title}</h1>
+          <p className="article-source">Source: {source}</p>
+        </div>
         <AudioTranscript transcript={summary} />
         <BiasImage bias={bias} />
         <QuizCard quizQuestions={dummyQuestions} />
-        <h2 className="section-heading">Critical Questions</h2>
-        {critical_questions.map((faq, idx) => (
-          <QAComponent
-            key={idx}
-            question={faq.question}
-            answer={faq.answer}
-          />
-        ))}
-        <h2>Community Notes</h2>
+        <div className='padding-vertical'>
+          <h2 className='qa-item'>Critical Questions</h2>
+          {critical_questions.map((faq, idx) => (
+            <QAComponent
+              key={idx}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+        <div className='padding-vertical'>
+          <div className='line-div'></div>
+        </div>
+        <div className='padding-vertical'>
+          <h2>Community Notes</h2>
+          <p className='body-large link'>Submit a source</p>
+        </div>
         {dummyNotes.map((note, idx) => (
           <CommunityNote key={idx} note={note} />
         ))}

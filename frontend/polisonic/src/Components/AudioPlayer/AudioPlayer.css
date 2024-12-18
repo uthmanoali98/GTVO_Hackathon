@@ -1,21 +1,21 @@
 /* Audio Player Container */
+.audio-player-container{
+    z-index: 1000;
+    position: fixed;
+    bottom: 0px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    background-color: var(--color-white-1);
+}
+
 .audio-player {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
-    /* Black background */
-    padding: 15px;
-    /* Padding on sides */
-    width: 345px;
-    height: 70px;
-    box-sizing: border-box;
-    position: fixed;
-    bottom: 35px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 1000;
+    align-self: stretch;
+    border: 3px solid var(--color-black-1);
+    width: 100%;
 }
 
 /* Play/Pause and Right Square Buttons */
@@ -35,7 +35,7 @@
 /* Progress Container */
 .progress-container {
     flex: 1 0 0;
-    height: 40px;
+    height: 100%;
     background-color: #333;
     /* Dark grey background */
     margin: 0px;
@@ -55,12 +55,12 @@
 /* Time Display Inside Progress Bar */
 .time-display {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
     color: #fff;
     pointer-events: none;
+    mix-blend-mode: difference;
     /* Prevent interaction */
 }
 

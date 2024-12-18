@@ -3,17 +3,25 @@
 .article-page-container {
   display: flex;
   flex-direction: column;
+  padding-bottom: 5em;
 }
 
 .article-hero {
   text-align: left;
-  margin-bottom: 1.4rem;
-  border-bottom: 3px solid var(--color-black-)
+}
+
+.meta-container{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1rem;
+align-self: stretch;
 }
 
 .article-hero-image {
   width: 100%;
   height: auto;
+  border-bottom: 3px solid var(--color-black-1);
 }
 
 .article-title {
@@ -36,9 +44,6 @@
 }
 
 .article-source {
-  font-weight: var(--body-small-font-weight);
-  line-height: var(--body-small-line-height);
-  font-size: var(--body-small-font-size-desktop);
   font-style: italic;
   color: var(--color-black-3);
 }

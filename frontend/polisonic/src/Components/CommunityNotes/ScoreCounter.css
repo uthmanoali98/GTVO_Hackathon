@@ -1,11 +1,10 @@
 .score-counter {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
   }
   
   .score-button {
-    background-color: var(--color-green-light);
+    background-color: var(--color-green_light);
     border: none;
     color: var(--color-black-1);
     font-size: 1.5rem;
@@ -13,21 +12,29 @@
     padding: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 25px;
+    height: 25px;
   }
   
   .score-button.decrement {
-    background-color: var(--color-red-light);
+    background-color: var(--color-red_light);
   }
   
   .score-button.active {
-    background-color: var(--color-green-main);
+    background-color: var(--color-green_main);
   }
   
   .score-button.decrement.active {
-    background-color: var(--color-red-main);
+    background-color: var(--color-red_main);
   }
   
   .score-value {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    padding: 0 .5em;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    color: var(--color-white-1);
+    background-color: var(--color-black-1);
   }

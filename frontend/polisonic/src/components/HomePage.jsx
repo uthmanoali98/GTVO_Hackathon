@@ -125,17 +125,17 @@ const HomePage = () => {
   return (
     <div className="homepage-container">
       <div className="hero padding-all">
-      <div className="logo-container">
+        <div className="logo-container">
           {/* PoliSonic Logo */}
           <h1 className="hero-title">PoliSonic</h1>
           {/* Lottie Animation */}
           <div className='lottie-container'>
-          <Lottie
-            animationData={PoliSonic}
-            play
-            loop
-            style={{ width: 75, height: 75}}
-          />
+            <Lottie
+              animationData={PoliSonic}
+              play
+              loop
+              style={{ width: 75, height: 75 }}
+            />
           </div>
         </div>
         <h4 className="hero-subtitle">Transform news articles into short audio summaries to listen and learn.</h4>
@@ -158,30 +158,30 @@ const HomePage = () => {
             '...'
           ) : (
             <div className='svg-container'>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 23 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="arrow-icon"
-            >
-              <path d="M10.7542 2L20 12M20 12L10.7542 22M20 12H0"></path>
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 23 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="arrow-icon"
+              >
+                <path d="M10.7542 2L20 12M20 12L10.7542 22M20 12H0"></path>
+              </svg>
             </div>
           )}
         </button>
       </div>
       <div className='padding-all'>
-      <div className="hero-image-container border-all-default">
-        <div className='image-filter'></div>
-        <img className='img-hero' src={heroimage} alt='hero'/>
-      </div>
+        <div className="hero-image-container border-all-default">
+          <div className='image-filter'></div>
+          <img className='img-hero' src={heroimage} alt='hero' />
+        </div>
       </div>
       <div className='padding-vertical'>
-      <div className='line-div'></div>
+        <div className='line-div'></div>
       </div>
       <section className="content-section">
         <div className='padding-all'>

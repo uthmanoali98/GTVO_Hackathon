@@ -15,9 +15,9 @@ const AudioTranscript = ({ transcript }) => {
 
 
     return (
-        <div className="audio-transcript-container">
-            <h3>Audio Transcript</h3>
-            <div className="body-large">
+        <div className="audio-transcript-container padding-all">
+            <h4>Audio Transcript</h4>
+            <div>
                 {showFull ? (
                     <p className="body-large">{transcript}</p> // Show full transcript
                 ) : (
@@ -26,7 +26,7 @@ const AudioTranscript = ({ transcript }) => {
                     </p>
                 )}
             </div>
-            <button className="body-reg toggle-button" onClick={toggleShowMore}>
+            <button className="toggle-button body-reg" onClick={toggleShowMore}>
                 {showFull ? 'Show less' : 'Show more'}
             </button>
         </div>

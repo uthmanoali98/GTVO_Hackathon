@@ -43,33 +43,35 @@ const AudioPlayer = ({ audioSrc }) => {
     };
 
     return (
-        <div className="audio-player">
-            <div className="square-button play-pause-btn" onClick={togglePlayPause}>
-                {isPlaying ? (
-                    <span>&#10073;&#10073;</span> // Pause icon
-                ) : (
-                    <span>&#9658;</span> // Play icon
-                )}
-            </div>
-            <div className="progress-container">
-                <div
-                    className="progress-bar"
-                    style={{ width: `${(currentTime / duration) * 100}%` }}
-                ></div>
-                <div className="time-display">
-                    {formatTime(currentTime)} / {formatTime(duration)}
+        <div className="audio-player-container padding-lrb">
+            <div className="audio-player">
+                <div className="square-button play-pause-btn" onClick={togglePlayPause}>
+                    {isPlaying ? (
+                        <span>&#10073;&#10073;</span> // Pause icon
+                    ) : (
+                        <span>&#9658;</span> // Play icon
+                    )}
                 </div>
+                <div className="progress-container">
+                    <div
+                        className="progress-bar"
+                        style={{ width: `${(currentTime / duration) * 100}%` }}
+                    ></div>
+                    <div className="time-display body-reg">
+                        {formatTime(currentTime)} / {formatTime(duration)}
+                    </div>
+                </div>
+                <div className="svg-container">
+                    <img src={RightIcon} alt="Icon" />
+                </div>
+                <audio
+                    src={audioSrc}
+                    ref={audioRef}
+                    crossOrigin="anonymous"
+                    onTimeUpdate={handleTimeUpdate}
+                    onLoadedMetadata={handleLoadedMetadata}
+                ></audio>
             </div>
-            <div className="svg-container">
-                <img src={RightIcon} alt="Icon" />
-            </div>
-            <audio
-                src={audioSrc}
-                ref={audioRef}
-                crossOrigin="anonymous"
-                onTimeUpdate={handleTimeUpdate}
-                onLoadedMetadata={handleLoadedMetadata}
-            ></audio>
         </div>
     );
 };

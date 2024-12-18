@@ -24,17 +24,19 @@ const BiasImage = ({ bias }) => {
     };
 
     return (
-        <div className={`bias-container padding-all-medium ${biasClass()}`}>
+        <div className='padding-vertical'>
+        <div className={`bias-container padding-all ${biasClass()}`}>
             <div className="bias-header">
                 <span className="body-reg">Article Bias</span>
-                <span className="h4 bias-label">{bias}</span>
+                <span className="h4">{bias}</span>
             </div>
-            <div className="bias-line">
+            {/* <div className="bias-line">
                 <div className="bias-indicator"></div>
-            </div>
+            </div> */}
             <div className="bias-info">
                 <span className="info-icon">i</span>
             </div>
+        </div>
         </div>
     );
 };
